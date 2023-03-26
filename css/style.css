@@ -1,0 +1,63 @@
+/* ********** Custom Properties ********** */
+:root {
+  --first-color: rgb(212, 0, 27);
+  --second-color: #454F63;
+  --third-color: #FFF;
+}
+
+
+
+/* ********** Bootstrap Styles *********** */
+.bg-danger {
+  background-color: var(--first-color) !important;
+}
+
+.navbar-brand img {
+  width: auto;
+  height: 30px;
+}
+
+.btn-danger {
+  background-color: var(--first-color);
+}
+
+.bg-dark {
+  background-color: var(--second-color) !important;
+}
+
+.navbar-dark {
+  color: var(--third-color) !important;
+}
+
+
+
+/* Estilos Propios  */
+
+.login-form {
+  width: 340px;
+  margin: 160px auto;
+  font-size: 15px;
+}
+
+.login-form form {
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.login-form h2 {
+  margin: 0 0 15px;
+}
+
+.form-control,
+.btn {
+  min-height: 38px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: bold;
+}
