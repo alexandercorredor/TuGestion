@@ -1,8 +1,7 @@
 /* ********** Custom Properties ********** */
 :root {
   --first-color: rgb(212, 0, 27);
-  --second-color: #454F63;
-  --third-color: #FFF;
+  --second-color: rgb(69, 79, 99);
 }
 
 
@@ -25,36 +24,32 @@
   background-color: var(--second-color) !important;
 }
 
-.navbar-dark {
-  color: var(--third-color) !important;
-}
 
 
 
-/* Estilos Propios  */
+/* ********** Estilos Propios *********** */
 
 .login-form {
-  width: 340px;
-  margin: 160px auto;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .login-form form {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   background: #f7f7f7;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  padding: 30px;
+  padding: 2rem;
 }
 
 .login-form h2 {
-  margin: 0 0 15px;
+  margin: 0 0 1rem;
+  color: var(--second-color);
 }
 
 .form-control,
 .btn {
   min-height: 38px;
   border-radius: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .btn {
