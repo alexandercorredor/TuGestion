@@ -5,7 +5,6 @@
 }
 
 
-
 /* ********** Bootstrap Styles *********** */
 .bg-danger {
   background-color: var(--first-color) !important;
@@ -23,7 +22,6 @@
 .bg-dark {
   background-color: var(--second-color) !important;
 }
-
 
 
 /* ********** Estilos Propios *********** */
