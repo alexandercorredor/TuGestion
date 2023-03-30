@@ -1,13 +1,23 @@
 /* ********** Custom Properties ********** */
 :root {
   --first-color: rgb(212, 0, 27);
-  --second-color: rgb(69, 79, 99);
+  --first-alpha-color: rgb(212, 0, 27, 0.75);
+  --second-color: rgb(86, 86, 87);
 }
 
 
+
 /* ********** Bootstrap Styles *********** */
+.btn-danger {
+  background-color: var(--first-color);
+}
+
 .bg-danger {
   background-color: var(--first-color) !important;
+}
+
+.bg-dark {
+  background-color: var(--second-color) !important;
 }
 
 .navbar-brand img {
@@ -15,13 +25,6 @@
   height: 30px;
 }
 
-.btn-danger {
-  background-color: var(--first-color);
-}
-
-.bg-dark {
-  background-color: var(--second-color) !important;
-}
 
 
 /* ********** Styles *********** */
@@ -38,16 +41,4 @@
 .login-form h2 {
   margin: 0 0 1rem;
   color: var(--second-color);
-}
-
-.form-control,
-.btn {
-  min-height: 38px;
-  border-radius: 2px;
-  margin-bottom: 16px;
-}
-
-.btn {
-  font-size: 15px;
-  font-weight: bold;
 }
