@@ -3,6 +3,8 @@
   --first-color: rgb(212, 0, 27);
   --first-alpha-color: rgb(212, 0, 27, 0.75);
   --second-color: rgb(86, 86, 87);
+
+  --bg-alpha-color: rgba(245, 245, 245, 0.75);
 }
 
 
@@ -28,6 +30,17 @@
 
 
 /* ********** Styles *********** */
+.bg-hero-image {
+  background-image: url(../img/hero-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-alpha-color {
+  background-color: var(--bg-alpha-color);
+}
+
 .login-form {
   font-size: 1rem;
 }
