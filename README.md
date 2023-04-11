@@ -1,2 +1,2 @@
-# TuGestion
+# TuGestión
 Proyecto Aplicativo Web TuGestión
