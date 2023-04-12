@@ -48,61 +48,91 @@
 
   <!-- Titulo -->
   <div class="text-center p-4">
-    <h1 class="fs-3">¡Bienvenid@ al Sistema <b><i>TuGestión</i></b>!</h1>
+    <h1 class="fs-3 fw-bold">Proyección de Cumplimiento</h1>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      
-      <!-- Grupo de Botnes -->
-      <div class="d-flex flex-column mt-2 col-12 col-md-3 ms-md-5 order-1 order-md-0">
-        <a href="#" class="btn btn-danger mb-2 fw-bold">Capturar Guía</a>
-        <a href="#" class="btn btn-danger mb-2 fw-bold">Rutero</a>
-        <a href="#" class="btn btn-danger mb-2 fw-bold">Seguimiento de Clientes</a>
-        <a href="ProyeccionCumplimiento.html" class="btn btn-danger mb-2 fw-bold">Proyeccion De Cumplimiento</a>
-        <a href="#" class="btn btn-danger mb-2 fw-bold">Ejecución Acumulada</a>
-        <a href="#" class="btn btn-danger mb-2 fw-bold">Formatos de Gestión Comercial</a>
-      </div>
-
-      <!-- carousel -->
-      <div class="col-12 col-md-7 mx-auto mt-2">
-        <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
-          <!-- <h2 class="text text-center">Anuncios Organizacionales</h2> -->
-          <div class="carousel-inner">
-            <div class="carousel-item active ratio ratio-4x3">
-              <img src="../img/WhatsApp Image 2023-04-05 at 9.26.05 PM.jpeg" class="d-block mx-auto" alt="...">
-            </div>
-            <div class="carousel-item ratio ratio-4x3">
-              <img src="../img/WhatsApp Image 2023-04-05 at 9.26.37 PM.jpeg" class="d-block mx-auto w-100" alt="...">
-            </div>
-            <div class=" carousel-item ratio ratio-4x3">
-              <img src="../img/WhatsApp Image 2023-04-05 at 9.27.28 PM.jpeg" class="d-block mx-auto w-100" alt="...">
-            </div>
-          </div>
-          <button class=" carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
+  <!-- Datos de PDS -->
+<div class="container">
+  <div class="row">
+  <div class="col-3 mb-4 ">
+    <div class="input-group align-items-center">
+      <label class="" for="">RECEPTORIA</label>
+      <input type="text" class="form-control ms-2 rounded-3">
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="bg-dark sticky-bottom py-3 mt-2">
-    <div class="container-fluid text-center">
-      <span class="navbar-text text-white ">
-        © 2023 VMC | Envía Colvanes. Todos los derechos reservados.
-      </span>
+  
+  <div class="col-3 mb-4">
+    <div class="input-group align-items-center">
+      <label for="">CÓDIGO</label>
+      <input type="text" class="form-control ms-2 rounded-3">
     </div>
-  </footer>
+  </div>
+  
+  <div class="col-3 mb-4">
+    <div class="input-group align-items-center">
+      <label for="">REGIONAL</label>
+      <input type="text" class="form-control ms-2 rounded-3">
+    </div>
+  </div>
+  
+  <div class="col-3 mb-4">
+    <div class="input-group align-items-center">
+      <label for="">MES/AÑO</label>
+      <input type="text" class="form-control ms-2 rounded-3">
+    </div>
+  </div>
+  </div>
+  </div>
 
+ <!-- Botones -->
+ <div class="d-flex d-grid gap-2 d-md-flex justify-content-md-center mb-3">
+  <button class="btn btn-danger me-md-2 fw-bold" type="button">Crear Proyección</button>
+  <button class="btn btn-danger fw-bold" type="button">Crear Filtros</button>
+  <input type="text" ng-model="searchText" placeholder="Buscar..." class="ng-pristine ng-valid ng-touched">
+  <button class="btn btn-danger fw-bold" type="button">Listar la proyección?</button>
+</div>
+
+
+
+<!-- Tabla -->
+<table class="table table table-striped mt-4">
+  <thead>
+    <tr class="bg-danger fw-bold mt-6 text-white">
+      <th scope="col">#</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">MT</th>
+      <th scope="col">MA</th>
+      <th scope="col">DE</th>
+      <th scope="col">PT</th>
+      <th scope="col">PA</th>
+      <th scope="col">MI</th>
+      <th scope="col">SM</th>
+      <th scope="col">RF</th>
+      <th scope="col">Ventas Credito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
