@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>TuGestión</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+        aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a href="#" class="text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="img/johan.jpg" alt="usuario" width="32" height="32" class="rounded-circle me-2">Johan Villarreal
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-sm-end">
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Configuración</a></li>
+              <li><a class="dropdown-item" href="#">Traslado</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index.html">Cerrar Sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Boton regresar -->
+  <div class="container">
+    <div class="col mt-3">
+      <a class="btn btn-dark" href="main.html"><i class="bi bi-arrow-left-circle-fill "></i> Regresar</a>
+    </div>
+  </div>
+
+  <!-- Titulo -->
+  <h1 class="fs-3 text-center p-4">RUTERO DE RECOLECCIÓN</h1>
+
+  <div class="container">
+    <!-- Datos de PDS -->
+    <div class="row mb-3">
+      <!-- Datos receptoria -->
+      <div class="col-3 mb-4 ">
+        <div class="input-group align-items-center">
+          <label class="" for="">RECEPTORIA</label>
+          <input type="text" class="form-control ms-2 rounded-3">
+        </div>
+      </div>
+      <div class="col-3 mb-4">
+        <div class="input-group align-items-center">
+          <label for="">CÓDIGO</label>
+          <input type="text" class="form-control ms-2 rounded-3">
+        </div>
+      </div>
+      <div class="col-3 mb-4">
+        <div class="input-group align-items-center">
+          <label for="">REGIONAL</label>
+          <input type="text" class="form-control ms-2 rounded-3">
+        </div>
+      </div>
+      <div class="col-3 mb-4">
+        <div class="input-group align-items-center">
+          <label for="">MES/AÑO</label>
+          <input type="text" class="form-control ms-2 rounded-3">
+        </div>
+      </div>
+      <!-- Botones -->
+      <div class="col mb-2">
+        <div class="btn-group">
+          <button class="btn btn-primary rounded-3 me-2 fs-12"><i class="bi bi-printer"></i> Imprimir</button>
+          <button class="btn btn-danger rounded-3 me-2 fs-12"><i class="bi bi-file-pdf"></i> PDF</button>
+          <button class="btn btn-success rounded-3 fs-12"><i class="bi bi-file-excel"></i> Excel</button>
+        </div>
+      </div>
+      <!-- Buscar -->
+      <div class="col">
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Buscar">
+          <button class="btn btn-outline-secondary btn-sm" type="button">Buscar</button>
+        </div>
+      </div>
+      <!-- Filtrar -->
+      <div class="col">
+        <div class="input-group">
+          <select class="form-select">
+            <option value="">Filtrar por mes y año</option>
+            <option value="01/2023">Enero 2023</option>
+            <option value="02/2023">Febrero 2023</option>
+            <option value="03/2023">Marzo 2023</option>
+          </select>
+          <button class="btn btn-outline-secondary btn-sm" type="button">Filtrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <div class="table-responsive-md">
+      <table class="table table-bordered table-hover table-sm">
+        <!-- Table Head -->
+        <thead class="align-middle fs-12">
+          <tr class="table-dark text-center">
+            <th scope="col" style="width: 3%;">Nº</th>
+            <th scope="colgroup" colspan="3">Fecha</th>
+            <th scope="col" style="width: 20%;">Cliente</th>
+            <th scope="col" style="width: 15%;">Contacto</th>
+            <th scope="col" style="width: 20%;">Dirección</th>
+            <th scope="col" style="width: 10%;">Teléfono</th>
+            <th scope="col">Hora Rec</th>
+            <th scope="colgroup" colspan="3">Unidades</th>
+            <th scope="col" style="width: 10%;">Otro</th>
+          </tr>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Día</th>
+            <th scope="col">Mes</th>
+            <th scope="col">Año</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col">MT</th>
+            <th scope="col">PT</th>
+            <th scope="col">DE</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <!-- Table Body -->
+        <tbody class="fs-12">
+          <tr>
+            <th scope="row">1</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">14</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">16</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">17</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">18</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">19</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+          <tr>
+            <th scope="row">20</th>
+            <td>09</td>
+            <td>04</td>
+            <td>2023</td>
+            <td>INTEGRAL DE IMPERMEABLES</td>
+            <td>ANDREA</td>
+            <td>CARRERA 26A #26-79 SUR</td>
+            <td>3023333333</td>
+            <td>17:20</td>
+            <td>MT</td>
+            <td>PT</td>
+            <td>DE</td>
+            <td>Otro</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Paginación -->
+    <nav class="mt-3" aria-label="...">
+      <ul class="pagination justify-content-end">
+        <li class="page-item disabled">
+          <a class="page-link">Anterior</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Siguiente</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>

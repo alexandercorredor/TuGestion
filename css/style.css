@@ -3,17 +3,30 @@
   --first-color: rgb(212, 0, 27);
   --first-alpha-color: rgb(212, 0, 27, 0.75);
   --second-color: rgb(86, 86, 87);
-
-  --bg-alpha-color: rgba(245, 245, 245, 0.75);
+  --bg-color: rgb(245, 245, 245);
+  --bg-alpha-color: rgb(245, 245, 245, 0.75);
 }
 
+
+/* ********** Reset & Global ********** */
+
+/* Hack para mantener footer abajo */
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
 
 
 /* ********** Bootstrap Styles *********** */
-.btn-danger {
-  background-color: var(--first-color);
-}
-
 .bg-danger {
   background-color: var(--first-color) !important;
 }
@@ -22,14 +35,51 @@
   background-color: var(--second-color) !important;
 }
 
+.btn-danger {
+  background-color: var(--first-color);
+}
+
+.btn-dark {
+  background-color: var(--second-color);
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23d4001b'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23d4001b'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
 .navbar-brand img {
   width: auto;
   height: 30px;
 }
 
+.table-dark {
+  --bs-table-color: #fff;
+  --bs-table-bg: #565657;
+  --bs-table-border-color: #fff;
+  --bs-table-striped-bg: #2c3034;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #373b3e;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #323539;
+  --bs-table-hover-color: #fff;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
+}
 
 
-/* ********** Styles *********** */
+/* ********** Custom Styles *********** */
+.bg-color {
+  background-color: var(--bg-color);
+}
+
+.bg-alpha-color {
+  background-color: var(--bg-alpha-color);
+}
+
 .bg-hero-image {
   background-image: url(../img/hero-image.jpg);
   background-repeat: no-repeat;
@@ -37,8 +87,8 @@
   background-position: center;
 }
 
-.bg-alpha-color {
-  background-color: var(--bg-alpha-color);
+.fs-12 {
+  font-size: 12px;
 }
 
 .login-form {
