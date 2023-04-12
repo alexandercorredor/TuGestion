@@ -1,4 +1,4 @@
-/* ********** Custom Properties ********** */
+/* **** Custom Properties **** */
 :root {
   --first-color: rgb(212, 0, 27);
   --first-alpha-color: rgb(212, 0, 27, 0.75);
@@ -8,27 +8,39 @@
 }
 
 
+/* **** Reset & Global **** */
 
-/* ********** Reset Styles ********** */
+/* Hack para mantener footer abajo */
+html {
+  height: 100%;
+}
 
-a:hover {
-  background-color: var(--first-alpha-color) !important;
-  font-weight: bold;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer {
+  margin-top: auto;
 }
 
 
-
-/* ********** Bootstrap Styles *********** */
-.btn-danger {
-  background-color: var(--first-color);
-}
-
+/* **** Bootstrap Styles ***** */
 .bg-danger {
   background-color: var(--first-color) !important;
 }
 
 .bg-dark {
   background-color: var(--second-color) !important;
+}
+
+.btn-danger {
+  background-color: var(--first-color);
+}
+
+.btn-dark {
+  background-color: var(--second-color);
 }
 
 .carousel-control-prev-icon {
@@ -44,9 +56,22 @@ a:hover {
   height: 30px;
 }
 
+.table-dark {
+  --bs-table-color: #fff;
+  --bs-table-bg: #565657;
+  --bs-table-border-color: #fff;
+  --bs-table-striped-bg: #2c3034;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #373b3e;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #323539;
+  --bs-table-hover-color: #fff;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
+}
 
 
-/* ********** Styles *********** */
+/* **** Custom Styles ***** */
 .bg-color {
   background-color: var(--bg-color);
 }
@@ -59,6 +84,11 @@ a:hover {
   background-image: url(../img/hero-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+}
+
+.fs-12 {
+  font-size: 12px;
 }
 
 .login-form {
