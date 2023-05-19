@@ -16,8 +16,8 @@
   <title>TuGestión</title>
 </head>
 
-<body>
-  <!-- Navbar -->
+<body class="d-flex flex-column min-vh-100">
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
@@ -46,60 +46,87 @@
     </div>
   </nav>
 
-  <!-- Titulo -->
-  <div class="text-center p-4">
-    <h1 class="fs-3">¡Bienvenid@ al Sistema <b><i>TuGestión</i></b>!</h1>
-  </div>
+  <main class="flex-grow-1">
+    <!-- Titulo -->
+    <div class="text-center p-4">
+      <h1 class="fs-3">¡Bienvenid@ al Sistema <b><i>TuGestión</i></b>!</h1>
+    </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Grupo de Botones -->
-      <div class="d-flex flex-column mt-2 col-12 col-md-3 ms-md-5 order-1 order-md-0">
-        <div class="btn-group dropend">
-          <button class="btn btn-danger mb-2 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Generar Guia
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Capturar Guía</a></li>
-            <li><a class="dropdown-item" href="#">Anular Guía</a></li>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- MENU -->
+        <div class="col-12 col-md-3 ms-md-1 mt-5 order-0">
+          <!-- Generar Guia -->
+          <ul class="nav flex-column">
+            <div class="btn-group dropend">
+              <button class="btn btn-danger mb-2 fw-bold dropdown-toggle p-1" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Generar Guia
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li class="nav-item"><a class="dropdown-item nav-link" href="capturar-guia.html">Capturar Guía</a></li>
+                <li class="nav-item"><a class="dropdown-item nav-link" href="#">Anular Guía</a></li>
+              </ul>
+            </div>
+            <!-- Rutero -->
+            <li class="nav-item">
+              <a href="rutero.html" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Rutero</a>
+            </li>
+            <!-- Seguimiento de Clientes -->
+            <li class="nav-item">
+              <a href="#" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Seguimiento de Clientes</a>
+            </li>
+            <!-- Proyeccion de Cumplimiento -->
+            <li class="nav-item">
+              <a href="proyeccion-cumplimiento.html"
+                class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Proyeccion
+                De
+                Cumplimiento</a>
+            </li>
+            <!-- Ejecucion Acumulada -->
+            <li class="nav-item">
+              <a href="#" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Ejecución Acumulada</a>
+            </li>
+            <!-- Formatos Gestion Comercial -->
+            <li class="nav-item">
+              <a href="formatos-gestionc.html" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Formatos de
+                Gestión Comercial</a>
+            </li>
           </ul>
         </div>
-        <a href="rutero.html" class="btn btn-danger mb-2 fw-bold">Rutero</a>
-        <a href="#" class="btn btn-danger mb-2 fw-bold">Seguimiento de Clientes</a>
-        <a href="proyeccion-cumplimiento.html" class="btn btn-danger mb-2 fw-bold">Proyeccion De Cumplimiento</a>
-        <a href="#" class="btn btn-danger mb-2 fw-bold">Ejecución Acumulada</a>
-        <a href="formatos-gestionc.html" class="btn btn-danger mb-2 fw-bold">Formatos de Gestión Comercial</a>
-      </div>
 
-      <!-- Carrusel -->
-      <div class="col-12 col-md-7 mx-auto mt-2">
-        <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active ratio ratio-4x3">
-              <img src="img/slide-1.jpg" class="d-block mx-auto" alt="imagen 1">
+        <!-- CARRUSEL -->
+        <div class="col-12 col-md-7 mx-auto mt-2">
+          <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active ratio ratio-4x3">
+                <img src="img/slide-1.jpg" class="d-block mx-auto" alt="imagen 1">
+              </div>
+              <div class="carousel-item ratio ratio-4x3">
+                <img src="img/slide-2.png" class="d-block mx-auto" alt="imagen 2">
+              </div>
+              <div class=" carousel-item ratio ratio-4x3">
+                <img src="img/slide-3.jpg" class="d-block mx-auto" alt="imagen 3">
+              </div>
             </div>
-            <div class="carousel-item ratio ratio-4x3">
-              <img src="img/slide-2.png" class="d-block mx-auto" alt="imagen 2">
-            </div>
-            <div class=" carousel-item ratio ratio-4x3">
-              <img src="img/slide-3.jpg" class="d-block mx-auto" alt="imagen 3">
-            </div>
+            <button class=" carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <button class=" carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
-  </div>
+
+  </main>
+
+
 
   <!-- Footer -->
   <footer class="bg-dark py-3">
