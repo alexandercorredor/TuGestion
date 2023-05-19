@@ -5,15 +5,25 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Datatables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
-  <title>TuGestión</title>
+  <title>Rutero de Recolección</title>
 </head>
 
+
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container-fluid">
@@ -45,17 +55,16 @@
   </nav>
 
   <!-- Boton regresar -->
-  <div class="container">
+  <div class="container-fluid">
     <div class="col mt-3">
       <a class="btn btn-dark" href="main.html"><i class="bi bi-arrow-left-circle-fill "></i> Regresar</a>
     </div>
   </div>
 
-  <!-- Titulo -->
-  <h1 class="fs-3 text-center p-4">RUTERO DE RECOLECCIÓN</h1>
+  <h1 class="fs-3 text-center py-3">RUTERO DE RECOLECCIÓN</h1>
 
-  <div class="container">
-    <!-- Datos de PDS -->
+  <!-- Datos de PDS -->
+  <class class="container-fluid">
     <div class="row mb-3">
       <!-- Datos receptoria -->
       <div class="col-3 mb-4 ">
@@ -82,396 +91,404 @@
           <input type="text" class="form-control ms-2 rounded-3">
         </div>
       </div>
-      <!-- Botones -->
-      <div class="col mb-2">
-        <div class="btn-group">
-          <button class="btn btn-primary rounded-3 me-2 fs-12"><i class="bi bi-printer"></i> Imprimir</button>
-          <button class="btn btn-danger rounded-3 me-2 fs-12"><i class="bi bi-file-pdf"></i> PDF</button>
-          <button class="btn btn-success rounded-3 fs-12"><i class="bi bi-file-excel"></i> Excel</button>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="table-responsive">
+              <table id="example" class="table table-hover display responsive nowrap" cellspacing="0"
+                style=" width:100%">
+                <thead class="fs-14">
+                  <!-- <tr>
+                <th></th>
+                <th colspan="3">Fecha</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th colspan="3">Unidades</th>
+                <th></th>
+              </tr> -->
+                  <tr class="bg-gris text-white">
+                    <th>Nº</th>
+                    <th>Día</th>
+                    <th>Mes</th>
+                    <th>Año</th>
+                    <th>Cliente</th>
+                    <th>Contacto</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Hora Recol</th>
+                    <th>MT</th>
+                    <th>PT</th>
+                    <th>DE</th>
+                    <th>Otro</th>
+                  </tr>
+                </thead>
+
+                <tbody class="fs-14">
+                  <tr>
+                    <th>1</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Nubia Pérez</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Kevin Muñoz</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Kevin Suárez</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>7</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>8</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>9</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>10</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>11</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <th>12</th>
+                  <td>28</td>
+                  <td>02</td>
+                  <td>2023</td>
+                  <td>Andres González</td>
+                  <td>Luis</td>
+                  <td>Carrera 20 #13-21</td>
+                  <td>3023333333</td>
+                  <td>15:30</td>
+                  <td>20</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td></td>
+                  </tr>
+                  <tr>
+                    <th>13</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>14</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>15</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>16</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>17</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>18</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>19</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>20</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>21</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>22</th>
+                    <td>28</td>
+                    <td>02</td>
+                    <td>2023</td>
+                    <td>Andres González</td>
+                    <td>Luis</td>
+                    <td>Carrera 20 #13-21</td>
+                    <td>3023333333</td>
+                    <td>15:30</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Buscar -->
-      <div class="col">
-        <div class="input-group">
-          <input type="search" class="form-control" placeholder="Buscar">
-          <button class="btn btn-outline-secondary btn-sm" type="button">Buscar</button>
-        </div>
-      </div>
-      <!-- Filtrar -->
-      <div class="col">
-        <div class="input-group">
-          <select class="form-select">
-            <option value="">Filtrar por mes y año</option>
-            <option value="01/2023">Enero 2023</option>
-            <option value="02/2023">Febrero 2023</option>
-            <option value="03/2023">Marzo 2023</option>
-          </select>
-          <button class="btn btn-outline-secondary btn-sm" type="button">Filtrar</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tabla -->
-    <div class="table-responsive-md">
-      <table class="table table-bordered table-hover table-sm">
-        <!-- Table Head -->
-        <thead class="align-middle fs-12">
-          <tr class="table-dark text-center">
-            <th scope="col" style="width: 3%;">Nº</th>
-            <th scope="colgroup" colspan="3">Fecha</th>
-            <th scope="col" style="width: 20%;">Cliente</th>
-            <th scope="col" style="width: 15%;">Contacto</th>
-            <th scope="col" style="width: 20%;">Dirección</th>
-            <th scope="col" style="width: 10%;">Teléfono</th>
-            <th scope="col">Hora Rec</th>
-            <th scope="colgroup" colspan="3">Unidades</th>
-            <th scope="col" style="width: 10%;">Otro</th>
-          </tr>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Día</th>
-            <th scope="col">Mes</th>
-            <th scope="col">Año</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col">MT</th>
-            <th scope="col">PT</th>
-            <th scope="col">DE</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <!-- Table Body -->
-        <tbody class="fs-12">
-          <tr>
-            <th scope="row">1</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">9</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">10</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">11</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">12</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">13</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">14</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">15</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">16</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">17</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">18</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">19</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-          <tr>
-            <th scope="row">20</th>
-            <td>09</td>
-            <td>04</td>
-            <td>2023</td>
-            <td>INTEGRAL DE IMPERMEABLES</td>
-            <td>ANDREA</td>
-            <td>CARRERA 26A #26-79 SUR</td>
-            <td>3023333333</td>
-            <td>17:20</td>
-            <td>MT</td>
-            <td>PT</td>
-            <td>DE</td>
-            <td>Otro</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Paginación -->
-    <nav class="mt-3" aria-label="...">
-      <ul class="pagination justify-content-end">
-        <li class="page-item disabled">
-          <a class="page-link">Anterior</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item active" aria-current="page">
-          <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">Siguiente</a>
-        </li>
-      </ul>
-    </nav>
 
 
-    <!-- Script Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"></script>
+
+      <!-- Scripts Datatables -->
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+      <!-- <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script> -->
+      <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.bootstrap5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+      <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+      <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
+
+      <!-- Script Bootstrap 5 -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+      <!-- Custom Script -->
+      <script src="js/rutero.js"></script>
 
 </body>
 
