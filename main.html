@@ -55,7 +55,16 @@
     <div class="row">
       <!-- Grupo de Botones -->
       <div class="d-flex flex-column mt-2 col-12 col-md-3 ms-md-5 order-1 order-md-0">
-        <a href="#" class="btn btn-danger mb-2 fw-bold">Capturar Guía</a>
+        <div class="btn-group dropend">
+          <button class="btn btn-danger mb-2 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Generar Guia
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Capturar Guía</a></li>
+            <li><a class="dropdown-item" href="#">Anular Guía</a></li>
+          </ul>
+        </div>
         <a href="rutero.html" class="btn btn-danger mb-2 fw-bold">Rutero</a>
         <a href="#" class="btn btn-danger mb-2 fw-bold">Seguimiento de Clientes</a>
         <a href="proyeccion-cumplimiento.html" class="btn btn-danger mb-2 fw-bold">Proyeccion De Cumplimiento</a>
