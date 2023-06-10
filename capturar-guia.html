@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>PRUEBA</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+        aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a href="#" class="text-white text-decoration-none dropdown-toggle" id="dropdownUser1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="img/johan.jpg" alt="usuario" width="32" height="32" class="rounded-circle me-2">Johan Villarreal
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-sm-end">
+              <li><a class="dropdown-item" href="#">Configuración</a></li>
+              <li><a class="dropdown-item" href="#">Traslado</a></li>
+              <hr>
+              <li><a class="dropdown-item" href="index.html">Cerrar Sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow-1">
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- MENU -->
+        <div class="col-12 col-md-3 ms-md-1 mt-5 order-0">
+          <!-- Generar Guia -->
+          <ul class="nav flex-column">
+            <div class="btn-group dropend">
+              <button class="btn btn-danger mb-2 fw-bold dropdown-toggle p-1" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Generar Guia
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li class="nav-item"><a class="dropdown-item nav-link" href="#">Capturar Guía</a></li>
+                <li class="nav-item"><a class="dropdown-item nav-link" href="#">Anular Guía</a></li>
+              </ul>
+            </div>
+            <!-- Rutero -->
+            <li class="nav-item">
+              <a href="rutero.html" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Rutero</a>
+            </li>
+            <!-- Seguimiento de Clientes -->
+            <li class="nav-item">
+              <a href="#" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Seguimiento de Clientes</a>
+            </li>
+            <!-- Proyeccion de Cumplimiento -->
+            <li class="nav-item">
+              <a href="proyeccion-cumplimiento.html"
+                class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Proyeccion De Cumplimiento</a>
+            </li>
+            <!-- Ejecucion Acumulada -->
+            <li class="nav-item">
+              <a href="#" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Ejecución Acumulada</a>
+            </li>
+            <!-- Formatos Gestion Comercial -->
+            <li class="nav-item">
+              <a href="formatos-gestionc.html" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Formatos de
+                Gestión Comercial</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- FORMULARIO GUIA -->
+        <div class="col-12 col-md-8 bg-color flex-grow-1 me-2">
+          <div class="container p-0 ">
+            <!-- Titulo -->
+            <div class="p-1">
+              <h1 class="fs-5 m-0 text-center mt-1">CAPTURA DE GUÍA</h1>
+            </div>
+            <form class="fs-14">
+
+              <h2 class="fs-5 text-danger">Datos remitente</h2>
+
+              <!-- 1ra fila -->
+              <div class="col-md-3 input-group-sm mb-3">
+                <label for="documento">Documento:</label>
+                <input type="text" id="documento" class="form-control">
+              </div>
+
+              <!-- 2da fila -->
+              <div class="row mb-3">
+                <div class="col-md-4 input-group-sm">
+                  <label for="ciudadOrigen">Ciudad Origen:</label>
+                  <input type="text" id="ciudadOrigen" class="form-control">
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="personeria">Personería:</label>
+                  <select id="personeria" class="form-select">
+                    <option value="natural">Natural</option>
+                    <option value="juridica">Jurídica</option>
+                  </select>
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="cuenta">Cuenta:</label>
+                  <select id="cuenta" class="form-select">
+                    <option value="cuenta1" disabled selected>- Seleccione una cuenta -</option>
+                    <option value="cuenta2">Cuenta 1</option>
+                    <option value="cuenta3">Cuenta 2</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 3ra fila -->
+              <div class="row mb-3">
+                <div class="col-md-3 input-group-sm">
+                  <label for="primerNombre">Primer Nombre:</label>
+                  <input type="text" id="primerNombre" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="segundoNombre">Segundo Nombre:</label>
+                  <input type="text" id="segundoNombre" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="primerApellido">Primer Apellido:</label>
+                  <input type="text" id="primerApellido" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="segundoApellido">Segundo Apellido:</label>
+                  <input type="text" id="segundoApellido" class="form-control">
+                </div>
+              </div>
+
+              <!-- 4ta fila -->
+              <div class="row mb-3">
+                <div class="col-md-8 input-group-sm">
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" id="direccion" class="form-control">
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="telefono">Celular:</label>
+                  <input type="text" id="telefono" class="form-control">
+                </div>
+              </div>
+
+              <!-- 5ta fila -->
+              <div class="row mb-5">
+                <div class="col-md-4 input-group-sm">
+                  <label for="formaPago">Forma de Pago:</label>
+                  <select id="formaPago" class="form-select">
+                    <option value="pago1">Contado</option>
+                    <option value="pago2">Crédito</option>
+                    <option value="pago3">Pago 3</option>
+                  </select>
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="servicio">Servicio:</label>
+                  <select id="servicio" class="form-select">
+                    <option value="servicio1" disabled selected>- Seleccione un servicio -</option>
+                    <option value="servicio1">Servicio 1</option>
+                    <option value="servicio2">Servicio 2</option>
+                    <option value="servicio3">Servicio 3</option>
+                  </select>
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="recogida">¿Solicitó recogida?</label>
+                  <select id="recogida" class="form-select">
+                    <option value="No" selected>No</option>
+                    <option value="Si">Si</option>
+                  </select>
+                </div>
+              </div>
+
+              <hr>
+
+              <h2 class="fs-5 text-danger">Datos destinatario</h2>
+              <div class="row mb-3">
+                <div class="col-md-3 input-group-sm">
+                  <label for="primerNombre">Primer Nombre:</label>
+                  <input type="text" id="primerNombre" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="segundoNombre">Segundo Nombre:</label>
+                  <input type="text" id="segundoNombre" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="primerApellido">Primer Apellido:</label>
+                  <input type="text" id="primerApellido" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="segundoApellido">Segundo Apellido:</label>
+                  <input type="text" id="segundoApellido" class="form-control">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-12 input-group-sm">
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" id="direccion" class="form-control">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-4 input-group-sm">
+                  <label for="ciudadDestino">Ciudad Destino:</label>
+                  <input type="text" id="ciudadDestino" class="form-control">
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="telefono">Celular:</label>
+                  <input type="text" id="telefono" class="form-control">
+                </div>
+                <div class="col-md-4 input-group-sm mb-3">
+                  <label for="documento">Documento:</label>
+                  <input type="text" id="documento" class="form-control">
+                </div>
+              </div>
+
+              <div class="row mb-5">
+                <div class="col-md-4 input-group-sm">
+                  <label for="diceContener">Dice contener:</label>
+                  <input type="text" id="diceContener" class="form-control">
+                </div>
+                <div class="col-md-8 input-group-sm">
+                  <label for="notasGuia">Notas Guia:</label>
+                  <input type="text" id="notasGuia" class="form-control">
+                </div>
+              </div>
+
+              <hr>
+
+              <h2 class="fs-5 text-danger">Información mercancia</h2>
+              <div class="row my-3">
+                <div class="col-md-6 mx-auto bg-white mb-3 rounded-3">
+                  <table class="table table-bordered table-sm mt-3">
+                    <thead>
+                      <tr class="text-center">
+                        <th scope="col">#</th>
+                        <th scope="col">Unidades</th>
+                        <th scope="col">Peso Kg</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="text-center">
+                        <th scope="row"></th>
+                        <td><input type="text" style="width:56px"></td>
+                        <td><input type="text" style="width:56px"></td>
+                        <td class="p-0"><i class="bi bi-plus-circle-fill fs-4 text-danger"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+
+                <div class="col-md-4 input-group-sm">
+                  <a class="form-control btn btn-danger fw-bold mb-2" href="">
+                    <i class="bi bi-calculator me-2 fw-bold"></i>LIQUIDAR</a>
+                </div>
+
+                <div class="col-md-4 input-group-sm">
+                  <a class="form-control btn btn-danger fw-bold mb-2" href="">
+                    <i class="bi bi-check-square-fill me-2"></i>GENERAR GUÍA</a>
+                </div>
+
+                <div class="col-md-4 input-group-sm mb-3">
+                  <a class="form-control btn btn-danger fw-bold" href="">
+                    <i class="bi bi-file-earmark-fill me-2"></i>NUEVO</a>
+                </div>
+              </div>
+
+
+
+            </form>
+
+          </div>
+        </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark py-3">
+    <div class="container-fluid text-center">
+      <span class="navbar-text text-white ">
+        © 2023 VMC | Envía Colvanes. Todos los derechos reservados.
+      </span>
+    </div>
+  </footer>
+
+  <!-- Script Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

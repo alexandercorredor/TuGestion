@@ -1,4 +1,4 @@
-/* **** Custom Properties **** */
+/* ********** Custom Properties ********** */
 :root {
   --first-color: rgb(212, 0, 27);
   --first-alpha-color: rgb(212, 0, 27, 0.75);
@@ -8,7 +8,7 @@
 }
 
 
-/* **** Reset & Global **** */
+/* ********** Reset & Global ********** */
 
 /* Hack para mantener footer abajo */
 html {
@@ -26,7 +26,7 @@ footer {
 }
 
 
-/* **** Bootstrap Styles ***** */
+/* ********** Bootstrap Styles *********** */
 .bg-danger {
   background-color: var(--first-color) !important;
 }
@@ -70,8 +70,12 @@ footer {
   border-color: var(--bs-table-border-color);
 }
 
+.text-danger {
+  color: var(--first-color) !important;
+}
 
-/* **** Custom Styles ***** */
+
+/* ********** Custom Styles *********** */
 .bg-color {
   background-color: var(--bg-color);
 }
@@ -104,4 +108,26 @@ footer {
 .login-form h2 {
   margin: 0 0 1rem;
   color: var(--second-color);
+}
+
+/* Datatables Styles */
+.bg-gris {
+  background-color: #565657;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.page-item.active .page-link {
+  background-color: #565657;
+  color: #FFF;
+}
+
+.page-link {
+  color: #000;
+}
+
+.pagination {
+  padding: 0;
 }
