@@ -70,6 +70,10 @@ footer {
   border-color: var(--bs-table-border-color);
 }
 
+.text-danger {
+  color: var(--first-color) !important;
+}
+
 
 /* ********** Custom Styles *********** */
 .bg-color {

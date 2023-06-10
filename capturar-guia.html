@@ -90,7 +90,7 @@
         </div>
 
         <!-- FORMULARIO GUIA -->
-        <div class="col-12 col-md-8 bg-color flex-grow-1">
+        <div class="col-12 col-md-8 bg-color flex-grow-1 me-2">
           <div class="container p-0 ">
             <!-- Titulo -->
             <div class="p-1">
@@ -98,45 +98,15 @@
             </div>
             <form class="fs-14">
 
-              <div class="row mb-3 mt-1">
-                <div class="col-md-4 input-group-sm">
-                  <label for="fecha">Fecha:</label>
-                  <input type="date" id="fecha" class="form-control">
-                </div>
-                <div class="col-md-4 input-group-sm">
-                  <label for="hora">Hora:</label>
-                  <input type="time" id="hora" class="form-control">
-                </div>
-                <div class="col-md-4 input-group-sm">
-                  <label for="cuenta">Cuenta:</label>
-                  <select id="cuenta" class="form-select">
-                    <option value="cuenta1" disabled selected>- Seleccione una cuenta -</option>
-                    <option value="cuenta2">Cuenta 1</option>
-                    <option value="cuenta3">Cuenta 2</option>
-                  </select>
-                </div>
+              <h2 class="fs-5 text-danger">Datos remitente</h2>
+
+              <!-- 1ra fila -->
+              <div class="col-md-3 input-group-sm mb-3">
+                <label for="documento">Documento:</label>
+                <input type="text" id="documento" class="form-control">
               </div>
 
-              <div class="row mb-3">
-                <div class="col-md-6 input-group-sm">
-                  <label for="formaPago">Forma de Pago:</label>
-                  <select id="formaPago" class="form-select">
-                    <option value="pago1">Contado</option>
-                    <option value="pago2">Crédito</option>
-                    <option value="pago3">Pago 3</option>
-                  </select>
-                </div>
-                <div class="col-md-6 input-group-sm">
-                  <label for="servicio">Servicio:</label>
-                  <select id="servicio" class="form-select">
-                    <option value="servicio1" disabled selected>- Seleccione un servicio -</option>
-                    <option value="servicio1">Servicio 1</option>
-                    <option value="servicio2">Servicio 2</option>
-                    <option value="servicio3">Servicio 3</option>
-                  </select>
-                </div>
-              </div>
-              <h2 class="fs-5">Datos remitente</h2>
+              <!-- 2da fila -->
               <div class="row mb-3">
                 <div class="col-md-4 input-group-sm">
                   <label for="ciudadOrigen">Ciudad Origen:</label>
@@ -150,14 +120,78 @@
                   </select>
                 </div>
                 <div class="col-md-4 input-group-sm">
-                  <label for="tipoCliente">Tipo de Cliente:</label>
-                  <select id="tipoCliente" class="form-select">
-                    <option value="tipo1">Tipo 1</option>
-                    <option value="tipo2">Tipo 2</option>
+                  <label for="cuenta">Cuenta:</label>
+                  <select id="cuenta" class="form-select">
+                    <option value="cuenta1" disabled selected>- Seleccione una cuenta -</option>
+                    <option value="cuenta2">Cuenta 1</option>
+                    <option value="cuenta3">Cuenta 2</option>
                   </select>
                 </div>
               </div>
 
+              <!-- 3ra fila -->
+              <div class="row mb-3">
+                <div class="col-md-3 input-group-sm">
+                  <label for="primerNombre">Primer Nombre:</label>
+                  <input type="text" id="primerNombre" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="segundoNombre">Segundo Nombre:</label>
+                  <input type="text" id="segundoNombre" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="primerApellido">Primer Apellido:</label>
+                  <input type="text" id="primerApellido" class="form-control">
+                </div>
+                <div class="col-md-3 input-group-sm">
+                  <label for="segundoApellido">Segundo Apellido:</label>
+                  <input type="text" id="segundoApellido" class="form-control">
+                </div>
+              </div>
+
+              <!-- 4ta fila -->
+              <div class="row mb-3">
+                <div class="col-md-8 input-group-sm">
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" id="direccion" class="form-control">
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="telefono">Celular:</label>
+                  <input type="text" id="telefono" class="form-control">
+                </div>
+              </div>
+
+              <!-- 5ta fila -->
+              <div class="row mb-5">
+                <div class="col-md-4 input-group-sm">
+                  <label for="formaPago">Forma de Pago:</label>
+                  <select id="formaPago" class="form-select">
+                    <option value="pago1">Contado</option>
+                    <option value="pago2">Crédito</option>
+                    <option value="pago3">Pago 3</option>
+                  </select>
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="servicio">Servicio:</label>
+                  <select id="servicio" class="form-select">
+                    <option value="servicio1" disabled selected>- Seleccione un servicio -</option>
+                    <option value="servicio1">Servicio 1</option>
+                    <option value="servicio2">Servicio 2</option>
+                    <option value="servicio3">Servicio 3</option>
+                  </select>
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="recogida">¿Solicitó recogida?</label>
+                  <select id="recogida" class="form-select">
+                    <option value="No" selected>No</option>
+                    <option value="Si">Si</option>
+                  </select>
+                </div>
+              </div>
+
+              <hr>
+
+              <h2 class="fs-5 text-danger">Datos destinatario</h2>
               <div class="row mb-3">
                 <div class="col-md-3 input-group-sm">
                   <label for="primerNombre">Primer Nombre:</label>
@@ -178,16 +212,83 @@
               </div>
 
               <div class="row mb-3">
-                <div class="col-md-3 input-group-sm">
-                  <label for="documento">Documento:</label>
-                  <input type="text" id="documento" class="form-control">
-                </div>
-                <div class="col-md-9 input-group-sm">
+                <div class="col-md-12 input-group-sm">
                   <label for="direccion">Dirección:</label>
                   <input type="text" id="direccion" class="form-control">
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
+
+              <div class="row mb-3">
+                <div class="col-md-4 input-group-sm">
+                  <label for="ciudadDestino">Ciudad Destino:</label>
+                  <input type="text" id="ciudadDestino" class="form-control">
+                </div>
+                <div class="col-md-4 input-group-sm">
+                  <label for="telefono">Celular:</label>
+                  <input type="text" id="telefono" class="form-control">
+                </div>
+                <div class="col-md-4 input-group-sm mb-3">
+                  <label for="documento">Documento:</label>
+                  <input type="text" id="documento" class="form-control">
+                </div>
+              </div>
+
+              <div class="row mb-5">
+                <div class="col-md-4 input-group-sm">
+                  <label for="diceContener">Dice contener:</label>
+                  <input type="text" id="diceContener" class="form-control">
+                </div>
+                <div class="col-md-8 input-group-sm">
+                  <label for="notasGuia">Notas Guia:</label>
+                  <input type="text" id="notasGuia" class="form-control">
+                </div>
+              </div>
+
+              <hr>
+
+              <h2 class="fs-5 text-danger">Información mercancia</h2>
+              <div class="row my-3">
+                <div class="col-md-6 mx-auto bg-white mb-3 rounded-3">
+                  <table class="table table-bordered table-sm mt-3">
+                    <thead>
+                      <tr class="text-center">
+                        <th scope="col">#</th>
+                        <th scope="col">Unidades</th>
+                        <th scope="col">Peso Kg</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="text-center">
+                        <th scope="row"></th>
+                        <td><input type="text" style="width:56px"></td>
+                        <td><input type="text" style="width:56px"></td>
+                        <td class="p-0"><i class="bi bi-plus-circle-fill fs-4 text-danger"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+
+                <div class="col-md-4 input-group-sm">
+                  <a class="form-control btn btn-danger fw-bold mb-2" href="">
+                    <i class="bi bi-calculator me-2 fw-bold"></i>LIQUIDAR</a>
+                </div>
+
+                <div class="col-md-4 input-group-sm">
+                  <a class="form-control btn btn-danger fw-bold mb-2" href="">
+                    <i class="bi bi-check-square-fill me-2"></i>GENERAR GUÍA</a>
+                </div>
+
+                <div class="col-md-4 input-group-sm mb-3">
+                  <a class="form-control btn btn-danger fw-bold" href="">
+                    <i class="bi bi-file-earmark-fill me-2"></i>NUEVO</a>
+                </div>
+              </div>
+
+
 
             </form>
 
