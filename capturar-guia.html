@@ -36,12 +36,44 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-sm-end">
               <li><a class="dropdown-item" href="#">Configuración</a></li>
-              <li><a class="dropdown-item" href="#">Traslado</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalTraslado">Traslado</a>
+              </li>
               <hr>
               <li><a class="dropdown-item" href="index.html">Cerrar Sesión</a></li>
             </ul>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <!-- Modal para el formulario traslado -->
+    <div class="modal fade" id="modalTraslado" tabindex="-1" aria-labelledby="modalTrasladoLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTrasladoLabel">Solicitud de Traslado?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <!-- Formulario -->
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Verificado</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
