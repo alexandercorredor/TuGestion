@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css">
-  <title>PRUEBA</title>
+  <title>Captura de Guía</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -35,13 +35,45 @@
               <img src="img/johan.jpg" alt="usuario" width="32" height="32" class="rounded-circle me-2">Johan Villarreal
             </a>
             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-sm-end">
-              <li><a class="dropdown-item" href="#">Configuración</a></li>
-              <li><a class="dropdown-item" href="#">Traslado</a></li>
+              <li><a class="dropdown-item" href="admin.html">Configuración</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalTraslado">Traslado</a>
+              </li>
               <hr>
               <li><a class="dropdown-item" href="index.html">Cerrar Sesión</a></li>
             </ul>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <!-- Modal para el formulario traslado -->
+    <div class="modal fade" id="modalTraslado" tabindex="-1" aria-labelledby="modalTrasladoLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTrasladoLabel">Solicitud de Traslado?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <!-- Formulario -->
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Verificado</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -60,8 +92,11 @@
                 Generar Guia
               </button>
               <ul class="dropdown-menu dropdown-menu-dark">
-                <li class="nav-item"><a class="dropdown-item nav-link" href="#">Capturar Guía</a></li>
-                <li class="nav-item"><a class="dropdown-item nav-link" href="#">Anular Guía</a></li>
+                <li class="nav-item"><a class="dropdown-item nav-link" href="capturar-guia.html">Capturar Guía</a></li>
+                <!-- Anular Guía -->
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalAnular">Anular
+                    Guía</a>
+                </li>
               </ul>
             </div>
             <!-- Rutero -->
@@ -70,12 +105,16 @@
             </li>
             <!-- Seguimiento de Clientes -->
             <li class="nav-item">
-              <a href="#" class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Seguimiento de Clientes</a>
+              <a href="seguimiento-clientes.html"
+                class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Seguimiento de
+                Clientes</a>
             </li>
             <!-- Proyeccion de Cumplimiento -->
             <li class="nav-item">
               <a href="proyeccion-cumplimiento.html"
-                class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Proyeccion De Cumplimiento</a>
+                class="btn btn-danger mb-2 fw-bold nav-link text-white p-1">Proyeccion
+                De
+                Cumplimiento</a>
             </li>
             <!-- Ejecucion Acumulada -->
             <li class="nav-item">
@@ -87,6 +126,52 @@
                 Gestión Comercial</a>
             </li>
           </ul>
+
+          <!-- Modal Anular Guía -->
+          <div class="modal fade" id="modalAnular" tabindex="-1" aria-labelledby="modalAnularLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalAnularLabel">Anular Guía</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <!-- Guía -->
+                    <div class="mb-3">
+                      <label for="guia" class="form-label">Guía</label>
+                      <input type="text" class="form-control" id="guia">
+                    </div>
+                    <!-- Causal -->
+                    <div class="mb-4">
+                      <label for="causal" class="form-label">Causal</label>
+                      <select name="causal" class="form-control" id="causal">
+                        <option value="value1" selected>-- SELECCIONE --</option>
+                        <option value="value2">Error captura de datos</option>
+                        <option value="value3">Error tarifa</option>
+                        <option value="value4">Error en el servicio</option>
+                      </select>
+                    </div>
+                    <!-- Advertencia -->
+                    <div class="mb-4 border border-danger p-2">
+                      <p class="ms-3"><b>Atención:</b> recuerde que para anular una guía debe:</p>
+                      <ul>
+                        <li>No estar dentro de un corte</li>
+                        <li>Estar en estado producida</li>
+                        <li>No ser capturada en días anteriores</li>
+                        <li>Debe ser anulada por el usuario que la capturó</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-6 input-group-sm mx-auto">
+                      <a class="form-control btn btn-danger fw-bold mb-2 rounded-3" href="">
+                        <i class="bi bi-x-circle-fill me-2 "></i>ANULAR</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- FORMULARIO GUIA -->
